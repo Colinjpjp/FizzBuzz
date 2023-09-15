@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        color: white;
+        background-color: black;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 70%;
+        margin: 0 auto;
+        background: black;
+        border: 1px solid white;
+        padding: 10px;
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      button {
+        margin: 5px;
+        background-color: black;
+        color: white;
+        border: solid 1px white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: black;
+        border: 1px solid black;
+        background-color: white;
+      }
+
+      input {
+        border-radius: 0;
+        height: 1.5rem;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FizzBuzz</h1>
+      <form method="dialog">
+        <input type="number" />
+        <br />
+        <button class="FizzBuzz">FizzBuzz</button>
+      </form>
+
+      <p>
+        La idea es q veas en la consola los números que son múltiplos de 3 & 5
+        los que son múltiplo de 3 Serán "Fizz" & los múltiplos 5 serán "Buzz" y
+        los múltiplos de 5 & 3 serán "FizzBuzz"
+      </p>
+    </div>
+
+    <script>
+      const inputTxt = document.querySelector("input");
+      const btn1 = document.querySelector(".FizzBuzz");
+      const para = document.querySelector("p");
+
+      function Fizz() {
+        const numberValue = parseInt(inputTxt.value);
+        for (let i = 0; i <= numberValue; i++) {
+          if (inputTxt.value === "0") {
+            console.error("0 no es multiplo de ningun numero");
+          } else if (i === 0) {
+            console.log(0);
+          } else if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+          } else if (i % 5 === 0) {
+            console.log("Buzz");
+          } else {
+            console.log(i);
+          }
+        }
+      }
+      btn1.onclick = Fizz;
+    </script>
+  </body>
+</html>
