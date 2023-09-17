@@ -67,9 +67,8 @@
     <script>
       const inputTxt = document.querySelector("input");
       const btn1 = document.querySelector(".FizzBuzz");
-      const para = document.querySelector("p");
-
-      function Fizz() {
+      
+      function FizzBuzz() {
         const numberValue = parseInt(inputTxt.value);
         for (let i = 0; i <= numberValue; i++) {
           if (inputTxt.value === "0") {
@@ -87,7 +86,7 @@
           }
         }
       }
-      btn1.onclick = Fizz;
+      btn1.onclick = FizzBuzz()
     </script>
   </body>
 </html>
